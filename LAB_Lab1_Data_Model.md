@@ -13,22 +13,6 @@ As a Power Platform Maker, you will create three Dataverse tables,
 establish relationships between them, and populate them with sample
 banking data.
 
-## Solution Overview
-
-``` text
-Customer
-    │
-    │ 1
-    │
-    ├──────────∞ Bank Account
-    │
-Branch
-    │
-    │ 1
-    │
-    └──────────∞ Bank Account
-```
-
 ------------------------------------------------------------------------
 
 # Exercise 1 - Create the Customer table
