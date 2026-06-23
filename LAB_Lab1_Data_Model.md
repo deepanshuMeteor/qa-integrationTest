@@ -141,7 +141,7 @@ automatically creates relationships for Lookup columns.
 
   --------------------------------------------------------------------------------------------------------------------
   | **Name**            | **Email**                  | **Phone Number**  | **Gender** | **City**  | **KYC Status**   |
-  ---------- ----------------------------- ------------------ ---------- --------- -----------------------------------
+  |---------------------|----------------------------|-------------------|------------|-----------|------------------|
   |Ahmed Al Mansoori    |ahmed.almansoori@example.ae |  +971501112233    |  Male       | Dubai         | Verified    |
   |Fatima Al Suwaidi    |fatima.suwaidi@example.ae   |  +971551234567    |  Female     | Abu Dhabi     | Verified    |
   |Omar Al Kaabi        |omar.kaabi@example.ae       |  +971507654321    |  Male       | Sharjah       | Pending     |
