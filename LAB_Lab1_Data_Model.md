@@ -62,7 +62,7 @@ Repeat the previous process.
 1.  In the left navigation pane, select **Tables**.
 1.  Select **+ New table** drop down, and from the menu that appears choose **Table (advanced properties)**
 1.  In the table **Properties** panel, set the **Display name** to **Branch**. (Note: The plural name will auto-populate.)
-1.  Select the **Primary Column** Name, and set the **Display name** to *Branch Name**
+1.  Select the **Primary Column** Name, and set the **Display name** to **Branch Name**
 1.  Select the **Save** button to create your new table.
 
 ## Task 2 - Add the required columns
@@ -95,40 +95,35 @@ Repeat the previous process.
 
 ## Task 1 - Create the table
 
-1.  Navigate to **Tables**.
-2.  Select **+ New table**.
-3.  Choose **Blank table**.
-4.  Configure:
+1.  In the left navigation pane, select **Tables**.
+1.  Select **+ New table** drop down, and from the menu that appears choose **Table (advanced properties)**
+1.  In the table **Properties** panel, set the **Display name** to **Bank Account**. (Note: The plural name will auto-populate.)
+1.  Select the **Primary Column** Name, and set the **Display name** to **Account Number**
+1.  Select the **Save** button to create your new table.
 
-  Property              Value
-  --------------------- ----------------
-  Display name          Bank Account
-  Plural display name   Bank Accounts
-  Primary column        Account Number
+## Task 2 - Add the required columns
 
-5.  Select **Create**.
+1.  Ensure the **Branch** table is open.
+2.  Select **Columns**.
+3.  Select **+ New column**.
+4.  Configure your new column as follows:
+    - **Display name:** Account Type
+    - **Data Type:** Choices
+    - **Labels:** Savings, Current
+5.  Expand **Advanced options** and ensure the **Maximum character count** is **10**.
+6.  Select the **Save** button.
+7.  Configure your new column as follows:
+    - **Display name:** Customer
+    - **Data Type:** Lookup
+    - **Related Table:** Customer
+8.  Select **Save**.
+9.  Configure your new column as follows:
+    - **Display name:** Branch
+    - **Data Type:** Lookup
+    - **Related Table:** Branch
 
-## Task 2 - Add columns
+10.  Select **Save**.
 
-  Display Name   Data Type   Additional Settings
-  -------------- ----------- --------------------------
-  Customer       Lookup      Related table = Customer
-  Branch         Lookup      Related table = Branch
-  Account Type   Choice      Savings, Current
-  Status         Choice      Active, Inactive
-
-------------------------------------------------------------------------
-
-# Exercise 4 - Verify Relationships
-
-1.  Open the **Bank Account** table.
-2.  Select **Relationships**.
-3.  Verify the following relationships were automatically created:
-
-  Parent     Child
-  ---------- --------------
-  Customer   Bank Account
-  Branch     Bank Account
 
 No manual relationship creation is required because Dataverse
 automatically creates relationships for Lookup columns.
@@ -144,24 +139,15 @@ automatically creates relationships for Lookup columns.
 3.  Select **+ New record**.
 4.  Enter the following records and select **Save** after each one.
 
-  -------------------------------------------------------------------------------------------------
-  Name       Email                         Phone Number       Gender     City      KYC Status
-  ---------- ----------------------------- ------------------ ---------- --------- ----------------
-  Ahmed Al   ahmed.almansoori@example.ae   +971501112233      Male       Dubai     Verified
-  Mansoori                                                                         
-
-  Fatima Al  fatima.suwaidi@example.ae     +971551234567      Female     Abu Dhabi Verified
-  Suwaidi                                                                          
-
-  Omar Al    omar.kaabi@example.ae         +971507654321      Male       Sharjah   Pending
-  Kaabi                                                                            
-
-  Aisha Al   aisha.mazrouei@example.ae     +971521987654      Female     Dubai     Verified
-  Mazrouei                                                                         
-
-  Sarah      sarah.thomas@example.ae       +971509876543      Female     Ajman     Rejected
-  Thomas                                                                           
-  -------------------------------------------------------------------------------------------------
+  --------------------------------------------------------------------------------------------------------------------
+  | **Name**            | **Email**                  | **Phone Number**  | **Gender** | **City**  | **KYC Status**   |
+  ---------- ----------------------------- ------------------ ---------- --------- -----------------------------------
+  |Ahmed Al Mansoori    |ahmed.almansoori@example.ae |  +971501112233    |  Male       | Dubai         | Verified    |
+  |Fatima Al Suwaidi    |fatima.suwaidi@example.ae   |  +971551234567    |  Female     | Abu Dhabi     | Verified    |
+  |Omar Al Kaabi        |omar.kaabi@example.ae       |  +971507654321    |  Male       | Sharjah       | Pending     |
+  |Aisha Al Mazrouei    |aisha.mazrouei@example.ae   |  +971521987654    |  Female     | Dubai         | Verified    |
+  |Sarah Thomas         |sarah.thomas@example.ae     |  +971509876543    |  Female     | Ajman         | Rejected    |
+  --------------------------------------------------------------------------------------------------------------------
 
 ## Task 2 - Add Branch records
 
