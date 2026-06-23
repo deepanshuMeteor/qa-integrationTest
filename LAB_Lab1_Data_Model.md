@@ -35,40 +35,26 @@ Branch
 
 ## Task 1 - Create a Dataverse table
 
-1.  Open **https://make.powerapps.com**.
-2.  Sign in using your Microsoft account if prompted.
-3.  Verify that you are connected to the correct Power Platform
-    environment.
-4.  Select **Tables** from the left navigation.
-5.  Select **+ New table**.
-6.  Under **Create a table**, choose **Blank table**.
+1.  Navigate to <https://make.powerapps.com> and sign in with the credentials provided (*Available from the Resources tab of your lab environment. Use* **Administrative Username** *and* **Administrative Password**).
+1.  Ensure you are in the correct environment (**Dev One**) by checking the Environment picker in the upper-right corner of the screen.
+1.  In the left navigation pane, select **Tables**.
+1.  Select **+ New table** drop down, and from the menu that appears choose **Table (advanced properties)**
+1.  In the table **Properties** panel, set the **Display name** to **Customer**. (Note: The plural name will auto-populate.)
+1.  Select the **Save** button to create your new table.
 
-> **Why Blank table?**\
-> A Blank table is used because you are creating a custom banking data
-> model from scratch rather than using a standard template.
-
-Configure the following properties:
-
-  Property              Value
-  --------------------- -----------
-  Display name          Customer
-  Plural display name   Customers
-  Primary column        Name
-
-7.  Select **Create**.
-
-## Task 2 - Add the Email column (Detailed walkthrough)
+## Task 2 - Add the required column 
 
 1.  Ensure the **Customer** table is open.
 2.  Select **Columns**.
 3.  Select **+ New column**.
-4.  Configure the column:
-
-  Property       Value
-  -------------- -------------------
-  Display name   Email
-  Data type      Email
-  Required       Business Required
+4.  Configure your new column as follows:
+    - **Display name:** Phone Number
+    - **Data Type:** Single line of text
+5.  Expand **Advanced options** and ensure the **Maximum character count** is **2000**.
+6.  Select the **Save** button.
+7.  Configure your new column as follows:
+    - **Display name:** City
+    - **Data Type:** Single line of text
 
 5.  Select **Save**.
 
@@ -76,58 +62,50 @@ Configure the following properties:
 
 Repeat the previous process.
 
-  ------------------------------------------------------------------------
-  Display Name       Data Type     Required     Additional Settings
-  ------------------ ------------- ------------ --------------------------
-  Phone Number       Phone         Optional     None
+| **Column Display Name** | **Data Type**          | **Additional Settings**                                        |
+|-------------------------|------------------------|----------------------------------------------------------------|
+| Email                   | Text - Email           | Max length: 2000                                               |
+| Gender                  | Choices                | Labels: Male, Female, Other                                    |
+| KYC Status              | Choices                | Labels: Pending, Verified, Cancelled                           |
 
-  Gender             Choice        Optional     Male, Female, Other
 
-  City               Single line   Optional     Max Length = 100
-                     of text                    
 
-  KYC Status         Choice        Business     Pending, Verified,
-                                   Required     Rejected
-  ------------------------------------------------------------------------
-
-------------------------------------------------------------------------
 
 # Exercise 2 - Create the Branch table
 
-## Task 1 - Create the Branch table
+## Task 1 - Create a Dataverse table
 
-1.  Navigate to **Tables**.
-2.  Select **+ New table**.
-3.  Choose **Blank table**.
-4.  Configure:
+1.  In the left navigation pane, select **Tables**.
+1.  Select **+ New table** drop down, and from the menu that appears choose **Table (advanced properties)**
+1.  In the table **Properties** panel, set the **Display name** to **Branch**. (Note: The plural name will auto-populate.)
+1.  Select the **Primary Column** Name, and set the **Display name** to *Branch Name**
+1.  Select the **Save** button to create your new table.
 
-  Property              Value
-  --------------------- -------------
-  Display name          Branch
-  Plural display name   Branches
-  Primary column        Branch Name
+## Task 2 - Add the required columns
 
-5.  Select **Create**.
+1.  Ensure the **Branch** table is open.
+2.  Select **Columns**.
+3.  Select **+ New column**.
+4.  Configure your new column as follows:
+    - **Display name:** Phone
+    - **Data Type:** Single line of text
+5.  Expand **Advanced options** and ensure the **Maximum character count** is **10**.
+6.  Select the **Save** button.
+7.  Configure your new column as follows:
+    - **Display name:** City
+    - **Data Type:** Single line of text
 
-## Task 2 - Add Branch columns
+5.  Select **Save**.
 
-  -----------------------------------------------------------------------
-  Display Name          Data Type        Additional Settings
-  --------------------- ---------------- --------------------------------
-  Branch Code           Autonumber       BR-{SEQNUM:000}
+## Task 3 - Add the remaining Customer columns
 
-  City / Emirate        Choice           Abu Dhabi, Dubai, Sharjah,
-                                         Ajman, Umm Al Quwain, Ras Al
-                                         Khaimah, Fujairah
+Repeat the previous process.
 
-  SWIFT Code            Text             Max Length 11
+| **Column Display Name** | **Data Type**          | **Additional Settings**                                        |
+|-------------------------|------------------------|----------------------------------------------------------------|
+| Branch Code             | Autonumber             | Prefix : BR-                                                   |
+| Manager Name            | Single line of text    |                                                                |
 
-  Manager Name          Text             Max Length 100
-
-  Phone                 Phone            None
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
 
 # Exercise 3 - Create the Bank Account table
 
